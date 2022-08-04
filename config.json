@@ -1,0 +1,20 @@
+{
+  "hed": "The Michigan Daily",
+  "dek": "Description",
+  "social_img": "",
+  "deployment": "https://test.michigandaily.com",
+  "fetch": [
+    {
+      "id": "",
+      "output": "",
+      "auth": "./auth.json"
+    },
+    {
+      "id": "",
+      "sheetId": "0",
+      "output": "",
+      "auth": "./auth.json"
+    }
+  ],
+  "GA_MEASUREMENT_ID": ""
+}
