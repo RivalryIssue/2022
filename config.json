@@ -1,7 +1,6 @@
 {
   "hed": "The Rivalry Edition",
   "dek": "For the third year, The Michigan Daily and The Ohio State Lantern are producing a joint publication with stories about our schools' historic football rivalry. We're launching this work alongside a competitive fundraiser to help us cover our operating costs. Whether you're a Wolverine or a Buckeye, please consider donating to support award-winning student journalism.",
-  "deployment": "https://www.therivalrygame.com",
   "fetch": [
     {
       "id": "1ZHkeFQJzjH_vm3GTB9ZSRGS_lZQHcmlkI2Qf5Rp6HSM",
@@ -9,5 +8,10 @@
       "auth": "~/.daily-google-services.json"
     }
   ],
-  "GA_MEASUREMENT_ID": "G-BLVSNREB3V"
+  "GA_MEASUREMENT_ID": "G-BLVSNREB3V",
+  "deployment": {
+    "og_url": "https://www.therivalrygame.com",
+    "url": "https://rivalryissue.github.io/",
+    "build": "./dist"
+  }
 }
