@@ -8,13 +8,14 @@ It has several useful features:
 - [x] MicroCMS with [ArchieML](http://archieml.org/)
 - [x] Data ingest from Google Sheets
 - [x] Bundling with [Vite](https://vitejs.dev/)
-- [ ] Easy deploy to S3 bucket
 
 ## Using this template
 
 Click the green "Use this template" button to create a new instance of the `sourdough` template. Then, clone the new instance and run `yarn install` to initialize the project.
 
 You can use `yarn dev` to start a development server and `yarn build` to build production-ready files into `dist/`.
+
+Deploy to GitHub Pages by running `yarn sink deploy github`.
 
 ### Importing images
 
