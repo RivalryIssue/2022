@@ -19,26 +19,17 @@ const DonationGraphic = () => {
   return (
     <div className="graphic-container">
       <DonationBar
-        organization="The Michigan Daily"
-        amount={dailyMoney}
-        color="rgb(40, 64, 100)"
-      />
-      <DonationBar
         organization="The Lantern"
         amount={lanternMoney}
         color="rgb(200, 56, 67)"
       />
+      <DonationBar
+        organization="The Michigan Daily"
+        amount={dailyMoney}
+        color="rgb(40, 64, 100)"
+      />
 
       <div className="buttons-container">
-        <div className="donation-button">
-          <a
-            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry-2022"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={dailyLogo} alt="The Michigan Daily logo" loading="lazy" />
-          </a>
-        </div>
         <div className="donation-button">
           <a
             href="https://buckeyefunder.osu.edu/project/34023"
@@ -46,6 +37,15 @@ const DonationGraphic = () => {
             rel="noreferrer"
           >
             <img src={lanternLogo} alt="The Lantern logo" loading="lazy" />
+          </a>
+        </div>
+        <div className="donation-button">
+          <a
+            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry-2022"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={dailyLogo} alt="The Michigan Daily logo" loading="lazy" />
           </a>
         </div>
       </div>

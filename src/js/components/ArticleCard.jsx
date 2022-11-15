@@ -11,13 +11,13 @@ const ArticleCard = ({ data }) => {
   let imgHeight;
 
   if (data.school === "UM") {
-    divClassName = `right-${divClassName}`;
+    divClassName = `left-${divClassName}`;
     school = "michigan-card";
     logoSrc = tmdLogoBlack;
     logoAlt = "The Michigan Daily logo";
     imgHeight = "27.19px";
   } else {
-    divClassName = `left-${divClassName}`;
+    divClassName = `right-${divClassName}`;
     school = "osu-card";
     logoSrc = lanternLogo;
     logoAlt = "The Lantern logo";
