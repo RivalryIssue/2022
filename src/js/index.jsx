@@ -4,7 +4,7 @@ import ArticleGrid from "./components/ArticleGrid";
 import DonationGraphic from "./components/DonationGraphic";
 import Intro from "./components/Intro";
 import LandingPage from "./components/LandingPage";
-import Tabs from "./components/Tabs";
+import SchoolVideos from './components/SchoolVideos';
 import data from "../data/copy.json";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <LandingPage data={data} />
       <Intro description={data.homepage.description} />
       <DonationGraphic />
-      <Tabs />
+      <SchoolVideos />
       <ArticleGrid data={data} />
     </>
   </React.StrictMode>

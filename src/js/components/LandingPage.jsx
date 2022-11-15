@@ -18,7 +18,7 @@ const LandingPage = () => {
 
       <div className="logo-title-box">
         <h1>The Rivalry</h1>
-        <h2>2021</h2>
+        <h2>2022</h2>
         <a href="https://michigandaily.com" target="_blank" rel="noreferrer">
           <img src={tmdLogo} alt="The Michigan Daily logo" />
         </a>
