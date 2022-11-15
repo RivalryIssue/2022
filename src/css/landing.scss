@@ -66,7 +66,7 @@
 .chevron {
   position: absolute;
   bottom: 3vh;
-  margin-left: calc(50% - 31px);
+  margin-left: calc(50% - 25px);
   background-color: transparent;
   border: none;
 
@@ -75,26 +75,9 @@
     height: 50px;
     color: white;
     font-size: 50px;
-    -moz-animation: bounce 3s infinite;
-    -webkit-animation: bounce 3s infinite;
-    animation: bounce 3s infinite;
-
     &:hover {
       cursor: pointer;
     }
-  }
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
   }
 }
 

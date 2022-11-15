@@ -7,8 +7,9 @@ const Intro = ({ description }) => (
       style={{
         display: "flex",
         justifyContent: "center",
-      alignItems: "center"
-    }}>
+        alignItems: "center",
+      }}
+    >
       <div className="intro-desc">{description}</div>
     </div>
   </div>
