@@ -42,7 +42,7 @@ const DonationGraphic = () => {
         <h2 className="donation_title">
           <a
             className="daily"
-            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
+            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry-2022"
             target="_blank" rel="noreferrer"
           >
             The Michigan Daily
@@ -63,7 +63,7 @@ const DonationGraphic = () => {
         <h2 className="donation_title">
           <a
             className="ohio"
-            href="https://buckeyefunder.osu.edu/project/28518"
+            href="https://buckeyefunder.osu.edu/project/34023"
             target="_blank" rel="noreferrer"
           >
             The Lantern
@@ -84,14 +84,14 @@ const DonationGraphic = () => {
       <div className="buttons-container">
         <div className="donation-button">
           <a
-            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
+            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry-2022"
             target="_blank" rel="noreferrer"
           >
             <img src={tmd} alt="The Michigan Daily logo" loading="lazy"/>
           </a>
         </div>
         <div className="donation-button">
-          <a href="https://buckeyefunder.osu.edu/project/28518" target="_blank" rel="noreferrer">
+          <a href="https://buckeyefunder.osu.edu/project/34023" target="_blank" rel="noreferrer">
             <img src={lantern} alt="The Lantern logo" loading="lazy" />
           </a>
         </div>
