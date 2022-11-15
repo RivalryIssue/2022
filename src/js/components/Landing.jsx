@@ -1,27 +1,83 @@
 import React from "react";
 import "../../css/landing.scss";
-import tmdLogo from "../../images/logo/tmd-logo-black.png";
-import lanternLogo from "../../images/logo/lantern-logo-black.png";
+import tmdLogo from "../../images/logo/tmd-logo-white.png";
+import lanternLogo from "../../images/logo/lantern-logo-white.png";
+
+import dailyHelmet from "../../images/daily-helmet.png";
+import lanternHelmet from "../../images/lantern-helmet.png";
 
 const LandingPage = () => (
-  <>
-    <div className="landing-page">
-      <div className="landing-page-michigan" />
-      <div className="landing-page-ohio" />
+  <div id="landing">
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "0.25rem",
+        position: "relative",
+      }}
+    >
+      <div id="left-flag" />
+      <div
+        id="hero"
+        style={{
+          backgroundColor: "white",
+          padding: "1rem",
+        }}
+      >
+        <h1
+          style={{
+            margin: 0,
+            fontFamily: "Freshman",
+            fontWeight: "normal",
+            textAlign: "center",
+          }}
+        >
+          The Rivalry
+        </h1>
+      </div>
+      <div id="right-flag" />
     </div>
-
-    <div className="logo-title-box">
-      <h1>The Rivalry</h1>
-      <h2>2022</h2>
-      <a href="https://michigandaily.com" target="_blank" rel="noreferrer">
-        <img src={tmdLogo} alt="The Michigan Daily logo" />
+    <div id="logos">
+      <a
+        href="https://thelantern.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="The Lantern"
+      >
+        <img
+          src={lanternLogo}
+          alt="The Lantern logo"
+          width="200px"
+          height="auto"
+        />
       </a>
-      <p>&#10006;</p>
-      <a href="https://thelantern.com" target="_blank" rel="noreferrer">
-        <img src={lanternLogo} alt="The Lantern logo" />
+      <span>&times;</span>
+      <a
+        href="https://michigandaily.com"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="The Michigan Daily"
+      >
+        <img
+          src={tmdLogo}
+          alt="The Michigan Daily logo"
+          width="200px"
+          height="27px"
+        />
       </a>
     </div>
-
+    <div id="lantern-helmet">
+      <img
+        src={lanternHelmet}
+        alt="Ohio State football helmet with The Lantern logo"
+      />
+    </div>
+    <div id="daily-helmet">
+      <img
+        src={dailyHelmet}
+        alt="Michigan football helmet with The Michigan Daily logo"
+      />
+    </div>
     <a href="#main" type="button" className="chevron" aria-label="Scroll down">
       <svg
         aria-hidden="true"
@@ -36,7 +92,7 @@ const LandingPage = () => (
         />
       </svg>
     </a>
-  </>
+  </div>
 );
 
 export default LandingPage;

@@ -1,72 +1,127 @@
-.landing-page {
-  width: 100vw;
-  height: 100vh;
+#landing {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgb(185, 54, 53) 50%, rgb(47, 65, 98) 50% 100%),
+}
 
-  .landing-page-michigan,
-  .landing-page-ohio {
-    width: 50%;
-    object-fit: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+#logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 0.25rem;
 
-  .landing-page-michigan {
-    background: linear-gradient(
-        0deg,
-        rgba(255, 203, 5, 0.3),
-        rgba(255, 203, 5, 0.3),
-        rgba(255, 203, 5, 0.3)
-      ),
-      url("https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3");
-    background-size: cover;
-  }
-
-  .landing-page-ohio {
-    background: linear-gradient(
-        0deg,
-        rgba(187, 0, 0, 0.3),
-        rgba(187, 0, 0, 0.3),
-        rgba(187, 0, 0, 0.3)
-      ),
-      url("https://www.thelantern.com/files/2019/11/edit-2872-1440x960.jpg");
-    background-size: cover;
-    background-position: right;
+  span {
+    font-size: 2.5rem;
+    line-height: 0rem;
   }
 }
 
-.logo-title-box {
+#lantern-helmet, #daily-helmet {
   position: absolute;
-  width: 40%;
-  margin-left: 30%;
-  margin-top: -100vh;
-  background-color: white;
-  overflow: hidden;
-  text-align: center;
-  font-size: 35px;
-  padding: 50px;
-  box-sizing: border-box;
-
-  h2 {
-    margin-top: 0;
-    color: #585858;
-  }
+  bottom: 5%;
 
   img {
-    height: 40px;
+    width: 300px;
+    height: auto;
+  }
+}
+
+#lantern-helmet {
+  left: 5%;
+}
+
+#daily-helmet {
+  right: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  #lantern-helmet img, #daily-helmet img {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #logos {
+    flex-direction: column;
+    gap: 0;
+    span {
+      font-size: 2rem;
+      line-height: 1rem;
+    }
   }
 
-  p {
-    margin: 0;
+  #lantern-helmet img, #daily-helmet img  {
+    width: 200px;
   }
+}
+
+@media screen and (max-width: 447px) {
+  #lantern-helmet {
+    left: 2.5%;
+    bottom: 2.5%;
+  }
+
+  #daily-helmet {
+    right: 2.5%;
+    bottom: 2.5%;
+  }
+
+  #lantern-helmet img, #daily-helmet img  {
+    width: 130px;
+  }
+}
+
+#hero {
+  font-size: 3rem;
+
+  @media screen and (max-width: 760px) {
+    font-size: 2rem;
+  }
+}
+
+#left-flag, #right-flag {
+  --flag-height: 110px;
+
+  position: relative;
+  width: 40px;
+  height: var(--flag-height);
+  background-color: white;
+
+  @media screen and (max-width: 760px) {
+    --flag-height: 80px;
+  }
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
+#left-flag::after, #right-flag::after {
+  content: " ";
+  position: absolute;
+  border-top: calc(var(--flag-height) / 2) solid transparent;
+  border-bottom: calc(var(--flag-height) / 2) solid transparent;
+}
+
+#left-flag::after {
+  border-left: 20px solid rgb(185, 54, 53);
+}
+
+#right-flag::after {
+  left: 20px;
+  border-right: 20px solid rgb(47, 65, 98);
 }
 
 .chevron {
   position: absolute;
   bottom: 3vh;
-  margin-left: calc(50% - 25px);
   background-color: transparent;
   border: none;
 
@@ -78,46 +133,5 @@
     &:hover {
       cursor: pointer;
     }
-  }
-}
-
-@media only screen and (max-width: 1250px) {
-  .chevron svg {
-    bottom: 5vh;
-  }
-  .logo-title-box {
-    width: 60%;
-    margin-left: 20%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .landing-page {
-    flex-direction: column;
-    .landing-page-michigan,
-    .landing-page-ohio {
-      width: 100%;
-      height: 50%;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .logo-title-box {
-    margin-top: -90vh;
-    margin-left: 15%;
-    width: 70%;
-    padding: 40px 20px;
-    font-size: 30px;
-
-    img {
-      height: 20px;
-    }
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .logo-title-box {
-    font-size: 25px;
   }
 }

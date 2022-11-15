@@ -1,8 +1,13 @@
-$daily-base: #374567;
-$lantern-base: #bb0000;
+$daily-base: rgb(47, 65, 98);
+$lantern-base: rgb(185, 54, 53);
 
 *:focus {
   outline: none !important;
+}
+
+@font-face {
+  font-family: "Freshman";
+  src: url("../fonts/Freshman.ttf") format("truetype");
 }
 
 html,
@@ -60,6 +65,7 @@ body {
 
   .schoolName {
     font-family: "Lora", serif;
+    font-weight: bold;
   }
 
   .player-wrapper {

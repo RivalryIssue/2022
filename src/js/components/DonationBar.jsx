@@ -30,7 +30,7 @@ const DonationBar = ({ organization, amount, color }) => {
           style={{
             width: "100%",
             height: "30px",
-            background: `linear-gradient(to right, ${color} ${percentage}%, lightgray ${percentage}% 100%`,
+            background: `linear-gradient(to right, ${color} ${percentage}%, lightgray ${percentage}% 100%)`,
           }}
         />
       </div>

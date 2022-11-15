@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import tmdLogoBlack from "../../images/logo/tmd-logo-black.png";
-import lanternLogo from "../../images/logo/lantern-logo-black.png";
+import lanternLogo from "../../images/logo/lantern-logo-color.png";
 
 const ArticleCard = ({ data }) => {
   let divClassName = "article-card";
   let school;
   let logoSrc;
   let logoAlt;
+  let imgWidth;
   let imgHeight;
 
   if (data.school === "UM") {
@@ -15,13 +16,15 @@ const ArticleCard = ({ data }) => {
     school = "michigan-card";
     logoSrc = tmdLogoBlack;
     logoAlt = "The Michigan Daily logo";
+    imgWidth = "200px";
     imgHeight = "27.19px";
   } else {
     divClassName = `right-${divClassName}`;
     school = "osu-card";
     logoSrc = lanternLogo;
     logoAlt = "The Lantern logo";
-    imgHeight = "30.14px";
+    imgWidth = "150px";
+    imgHeight = "21.98px";
   }
 
   const ref = useRef(null);
@@ -65,7 +68,7 @@ const ArticleCard = ({ data }) => {
           <div className="article-author">{data.author}</div>
           <img
             className="card-news-logo"
-            width="200px"
+            width={imgWidth}
             height={imgHeight}
             src={logoSrc}
             alt={logoAlt}
