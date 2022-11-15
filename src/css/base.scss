@@ -95,27 +95,8 @@ body {
   align-items: center;
 }
 
-.progress {
-  margin: 50px 50px 10px 50px;
-  padding: 0px;
-  width: 500px;
-  background: white;
-  border: 5px solid black;
-  border-radius: 50px;
-  height: 40px;
-  overflow: hidden;
-}
-
-.progress_container {
-  padding-bottom: 20px;
-}
-
-.progress .progress__bar {
-  height: 100%;
-  width: 0;
-  border-radius: 4px;
-  border-color: black;
-  transition: 0.3s;
+.donation_container {
+  width: 100%;
 }
 
 .buttons-container {
