@@ -3,9 +3,6 @@ import "../../css/landing.scss";
 import tmdLogo from "../../images/logo/tmd-logo-white.png";
 import lanternLogo from "../../images/logo/lantern-logo-white.png";
 
-import dailyHelmet from "../../images/daily-helmet.png";
-import lanternHelmet from "../../images/lantern-helmet.png";
-
 const LandingPage = () => (
   <div id="landing">
     <div
@@ -68,13 +65,13 @@ const LandingPage = () => (
     </div>
     <div id="lantern-helmet">
       <img
-        src={lanternHelmet}
+        src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-helmet.png?w=500"
         alt="Ohio State football helmet with The Lantern logo"
       />
     </div>
     <div id="daily-helmet">
       <img
-        src={dailyHelmet}
+        src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/daily-helmet.png?w=500"
         alt="Michigan football helmet with The Michigan Daily logo"
       />
     </div>
