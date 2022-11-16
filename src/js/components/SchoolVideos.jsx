@@ -1,4 +1,6 @@
 import React from "react";
+import "lite-youtube-embed/src/lite-yt-embed";
+import "lite-youtube-embed/src/lite-yt-embed.css";
 
 const SchoolVideos = () => (
   <div className="container">
@@ -6,32 +8,18 @@ const SchoolVideos = () => (
       <div className="schoolVideo">
         <p className="schoolName">The Lantern</p>
         <div className="player-wrapper">
-          <iframe
-            loading="lazy"
-            width="100%"
-            height="100%"
-            src="https://www.youtube-nocookie.com/embed/7S7mrNkKfnI"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            // eslint-disable-next-line react/no-unknown-property
-            allowFullScreen
+          <lite-youtube
+            videoid="7S7mrNkKfnI"
+            playlabel="The Lantern vs. Michigan Daily Rivalry 2022"
           />
         </div>
       </div>
       <div className="schoolVideo">
         <p className="schoolName">The Michigan Daily</p>
         <div className="player-wrapper">
-          <iframe
-            loading="lazy"
-            width="100%"
-            height="100%"
-            src="https://www.youtube-nocookie.com/embed/92hbzgzqRqo"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            // eslint-disable-next-line react/no-unknown-property
-            allowFullScreen
+          <lite-youtube
+            videoid="92hbzgzqRqo"
+            playlabel="Michigan Daily Rivalry Edition 2022"
           />
         </div>
       </div>

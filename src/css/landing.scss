@@ -5,7 +5,11 @@
   align-items: center;
   height: fit-content;
   min-height: 100vh;
-  background: linear-gradient(to right, rgb(185, 54, 53) 50%, rgb(47, 65, 98) 50% 100%),
+  background: linear-gradient(
+    to right,
+    rgb(185, 54, 53) 50%,
+    rgb(47, 65, 98) 50% 100%
+  );
 }
 
 #logos {
@@ -23,7 +27,8 @@
   }
 }
 
-#lantern-helmet, #daily-helmet {
+#lantern-helmet,
+#daily-helmet {
   position: absolute;
   bottom: 5%;
 }
@@ -67,7 +72,8 @@
   }
 }
 
-#left-flag, #right-flag {
+#left-flag,
+#right-flag {
   --flag-height: 110px;
 
   position: relative;
@@ -84,7 +90,8 @@
   }
 }
 
-#left-flag::after, #right-flag::after {
+#left-flag::after,
+#right-flag::after {
   content: " ";
   position: absolute;
   border-top: calc(var(--flag-height) / 2) solid transparent;

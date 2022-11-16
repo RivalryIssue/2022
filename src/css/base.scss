@@ -138,6 +138,10 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
+  :root {
+    --video-width: 90vw;
+  }
+
   .buttons-container {
     width: 90%;
 
