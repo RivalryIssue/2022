@@ -1,7 +1,5 @@
 import React from "react";
 import "../../css/landing.scss";
-import tmdLogo from "../../images/logo/tmd-logo-white.png";
-import lanternLogo from "../../images/logo/lantern-logo-white.png";
 
 const LandingPage = () => (
   <div id="landing">
@@ -42,7 +40,7 @@ const LandingPage = () => (
         aria-label="The Lantern"
       >
         <img
-          src={lanternLogo}
+          src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-logo-white.png"
           alt="The Lantern logo"
           width="200px"
           height="43px"
@@ -56,7 +54,7 @@ const LandingPage = () => (
         aria-label="The Michigan Daily"
       >
         <img
-          src={tmdLogo}
+          src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/tmd-logo-white.png?w=500"
           alt="The Michigan Daily logo"
           width="200px"
           height="27px"
@@ -65,14 +63,18 @@ const LandingPage = () => (
     </div>
     <div id="lantern-helmet">
       <img
-        src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-helmet.png?w=500"
         alt="Ohio State football helmet with The Lantern logo"
+        srcSet="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-helmet.png?w=300 300w, https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-helmet.png?w=500 500w"
+        sizes="(max-width: 447px) 130px, (max-width: 560px) 200px, (max-width: 1200px) 250px, 300px"
+        src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-helmet.png?w=500"
       />
     </div>
     <div id="daily-helmet">
       <img
-        src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/daily-helmet.png?w=500"
         alt="Michigan football helmet with The Michigan Daily logo"
+        srcSet="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/daily-helmet.png?w=300 300w, https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/daily-helmet.png?w=500 500w"
+        sizes="(max-width: 447px) 130px, (max-width: 560px) 200px, (max-width: 1200px) 250px, 300px"
+        src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/daily-helmet.png?w=500"
       />
     </div>
     <a href="#main" type="button" className="chevron" aria-label="Scroll down">

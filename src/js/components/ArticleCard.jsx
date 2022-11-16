@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-import tmdLogoBlack from "../../images/logo/tmd-logo-black.png";
-import lanternLogo from "../../images/logo/lantern-logo-color.png";
 
 const ArticleCard = ({ data }) => {
   let divClassName = "article-card";
@@ -14,14 +12,16 @@ const ArticleCard = ({ data }) => {
   if (data.Publication === "The Michigan Daily") {
     divClassName = `left-${divClassName}`;
     school = "michigan-card";
-    logoSrc = tmdLogoBlack;
+    logoSrc =
+      "https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/tmd-logo-black.png?w=500";
     logoAlt = "The Michigan Daily logo";
     imgWidth = "200px";
     imgHeight = "27.19px";
   } else {
     divClassName = `right-${divClassName}`;
     school = "osu-card";
-    logoSrc = lanternLogo;
+    logoSrc =
+      "https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-logo-color.png";
     logoAlt = "The Lantern logo";
     imgWidth = "150px";
     imgHeight = "21.98px";

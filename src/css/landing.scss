@@ -26,11 +26,6 @@
 #lantern-helmet, #daily-helmet {
   position: absolute;
   bottom: 5%;
-
-  img {
-    width: 300px;
-    height: auto;
-  }
 }
 
 #lantern-helmet {
@@ -41,12 +36,6 @@
   right: 5%;
 }
 
-@media screen and (max-width: 1200px) {
-  #lantern-helmet img, #daily-helmet img {
-    width: 250px;
-  }
-}
-
 @media screen and (max-width: 560px) {
   #logos {
     flex-direction: column;
@@ -55,10 +44,6 @@
       font-size: 2rem;
       line-height: 1rem;
     }
-  }
-
-  #lantern-helmet img, #daily-helmet img  {
-    width: 200px;
   }
 }
 
@@ -71,10 +56,6 @@
   #daily-helmet {
     right: 2.5%;
     bottom: 2.5%;
-  }
-
-  #lantern-helmet img, #daily-helmet img  {
-    width: 130px;
   }
 }
 
