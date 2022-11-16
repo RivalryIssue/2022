@@ -7,6 +7,13 @@
       "id": "1-F3fuMhr7wUHaQRS7otjUNkYu5rkDIGweMWfqwDMv4U",
       "output": "./src/data/copy.json",
       "auth": "~/.daily-google-services.json"
+    },
+    {
+      "type": "sheet",
+      "id": "1yTMNn1iIpK8KWbRHyLNCJzrPeMNafz9lePfuE_TUrzI",
+      "sheetId": "0",
+      "output": "./src/data/data.csv",
+      "auth": "~/.daily-google-services.json"
     }
   ],
   "GA_MEASUREMENT_ID": "G-BLVSNREB3V",

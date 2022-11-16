@@ -13,9 +13,11 @@ const ArticleGrid = ({ data }) => {
       }, [])
       .concat((a.length > min ? a : b).slice(min));
   };
+
   const getAllData = () => {
-    const um = data.michigan.articles.map((a) => ({ ...a, school: "UM" }));
-    const osu = data.ohio.articles.map((a) => ({ ...a, school: "OSU" }));
+    const articles = data.filter((d) => d["Story Link"]);
+    const um = articles.filter((d) => d.Publication === "The Michigan Daily");
+    const osu = articles.filter((d) => d.Publication === "The Lantern");
     return interweave(osu, um);
   };
 
@@ -23,7 +25,11 @@ const ArticleGrid = ({ data }) => {
     <div className="container">
       <div className="article-grid">
         {getAllData().map((d, i) => (
-          <ArticleCard key={`${d.school}-${d.link}`} data={d} count={i} />
+          <ArticleCard
+            key={`${d.Publication}-${d["Story Link"]}`}
+            data={d}
+            count={i}
+          />
         ))}
       </div>
     </div>
@@ -31,14 +37,7 @@ const ArticleGrid = ({ data }) => {
 };
 
 ArticleGrid.propTypes = {
-  data: PropTypes.shape({
-    michigan: PropTypes.shape({
-      articles: PropTypes.arrayOf(PropTypes.shape()),
-    }).isRequired,
-    ohio: PropTypes.shape({
-      articles: PropTypes.arrayOf(PropTypes.shape()),
-    }).isRequired,
-  }).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
 export default ArticleGrid;

@@ -31,13 +31,13 @@ body {
 }
 
 .intro-desc {
-  font-size: 25px;
+  font-size: 20px;
   margin: 30px 0px;
   text-align: left;
   width: 100%;
   max-width: 60%;
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     max-width: 80%;
   }
 }
@@ -83,7 +83,6 @@ body {
 .graphic-container {
   width: 100%;
   margin: auto;
-  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);

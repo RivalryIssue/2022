@@ -29,6 +29,10 @@ $lantern-base: rgb(185, 54, 53);
     top: 50%;
     left: 0%;
     transform: translate(0%, -50%);
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
+    }
   }
 
   .text-link {
@@ -37,7 +41,7 @@ $lantern-base: rgb(185, 54, 53);
   }
 
   .article-title {
-    font-size: 35px;
+    font-size: 25px;
     pointer-events: auto;
   }
 
@@ -141,9 +145,6 @@ $lantern-base: rgb(185, 54, 53);
 
   .article-card {
     height: 70vh;
-    .article-title {
-      font-size: 40px;
-    }
   }
 }
 
@@ -151,9 +152,5 @@ $lantern-base: rgb(185, 54, 53);
   .article-text {
     width: 60%;
     height: auto;
-
-    .article-title {
-      font-size: 30px;
-    }
   }
 }

@@ -11,7 +11,7 @@ const ArticleCard = ({ data }) => {
   let imgWidth;
   let imgHeight;
 
-  if (data.school === "UM") {
+  if (data.Publication === "The Michigan Daily") {
     divClassName = `left-${divClassName}`;
     school = "michigan-card";
     logoSrc = tmdLogoBlack;
@@ -41,7 +41,7 @@ const ArticleCard = ({ data }) => {
     const callback = (entries, observer) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        setSource(`url(${data.img})`);
+        setSource(`url(${data["Image Link"]})`);
         observer.unobserve(ref.current);
       }
     };
@@ -52,7 +52,7 @@ const ArticleCard = ({ data }) => {
     return () => {
       observer.disconnect();
     };
-  }, [data.img]);
+  }, [data]);
 
   return (
     <div className="article-card-wrapper">
@@ -62,10 +62,10 @@ const ArticleCard = ({ data }) => {
         className={`article-card ${divClassName} ${school}`}
       >
         <div className="article-text">
-          <a href={data.link} className={`text-link ${school}-link`}>
-            <h1 className="article-title">{data.title}</h1>
+          <a href={data["Story Link"]} className={`text-link ${school}-link`}>
+            <h2 className="article-title">{data["Story Title"]}</h2>
           </a>
-          <div className="article-author">{data.author}</div>
+          <div className="article-author">{data.Author}</div>
           <img
             className="card-news-logo"
             width={imgWidth}
@@ -75,11 +75,11 @@ const ArticleCard = ({ data }) => {
             loading="lazy"
           />
           <br />
-          <a href={data.link}>
+          <a href={data["Story Link"]} rel="noreferrer" target="_blank">
             <button
               type="button"
               className="article-card-button"
-              title={data.link}
+              title={data["Story Link"]}
             >
               Read Article
             </button>
@@ -92,11 +92,11 @@ const ArticleCard = ({ data }) => {
 
 ArticleCard.propTypes = {
   data: PropTypes.shape({
-    school: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    Publication: PropTypes.string.isRequired,
+    "Story Title": PropTypes.string.isRequired,
+    Author: PropTypes.string.isRequired,
+    "Image Link": PropTypes.string.isRequired,
+    "Story Link": PropTypes.string.isRequired,
   }).isRequired,
 };
 
