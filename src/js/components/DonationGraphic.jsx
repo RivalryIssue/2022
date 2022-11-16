@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DonationBar from "./DonationBar";
-import dailyLogo from "../../images/donate/tmd-donate.jpg";
-import lanternLogo from "../../images/donate/lantern-donate.jpg";
 
 const DonationGraphic = () => {
   const [lanternMoney, setLanternMoney] = useState(0);
   const [dailyMoney, setDailyMoney] = useState(0);
-  const [lastModified, setLastModified] = useState(null);
 
   useEffect(() => {
     fetch("https://data.michigandaily.com/rivalry-edition-donations/2022.json")
-      .then((response) => {
-        if (response.headers.has("Last-Modified")) {
-          setLastModified(new Date(response.headers.get("Last-Modified")));
-        }
-        return response.json();
-      })
+      .then((response) => response.json())
       .then(({ lantern, daily }) => {
         setLanternMoney(Number(lantern));
         setDailyMoney(Number(daily));
@@ -34,19 +26,6 @@ const DonationGraphic = () => {
         amount={dailyMoney}
         color="rgb(47, 65, 98)"
       />
-      <div style={{ width: "100%" }}>
-        <div
-          style={{
-            textAlign: "end",
-            margin: "0 auto",
-            padding: "0 1rem",
-            boxSizing: "border-box",
-            maxWidth: "900px",
-          }}
-        >
-          Last updated: {lastModified !== null && lastModified.toLocaleString()}
-        </div>
-      </div>
 
       <div className="buttons-container">
         <div className="donation-button">
@@ -55,7 +34,11 @@ const DonationGraphic = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={lanternLogo} alt="The Lantern logo" loading="lazy" />
+            <img
+              src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/lantern-donate.jpg"
+              alt="The Lantern logo"
+              loading="lazy"
+            />
           </a>
         </div>
         <div className="donation-button">
@@ -64,7 +47,11 @@ const DonationGraphic = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={dailyLogo} alt="The Michigan Daily logo" loading="lazy" />
+            <img
+              src="https://i1.wp.com/www.michigandaily.com/wp-content/uploads/2022/11/tmd-donate.jpg"
+              alt="The Michigan Daily logo"
+              loading="lazy"
+            />
           </a>
         </div>
       </div>
