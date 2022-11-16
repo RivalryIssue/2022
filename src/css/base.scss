@@ -8,6 +8,7 @@ $lantern-base: rgb(185, 54, 53);
 @font-face {
   font-family: "Freshman";
   src: url("../fonts/Freshman.ttf") format("truetype");
+  font-display: swap;
 }
 
 html,

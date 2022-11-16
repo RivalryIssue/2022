@@ -24,7 +24,7 @@ const LandingPage = () => (
         <h1
           style={{
             margin: 0,
-            fontFamily: "Freshman",
+            fontFamily: "Freshman, serif",
             fontWeight: "normal",
             textAlign: "center",
           }}
@@ -45,7 +45,7 @@ const LandingPage = () => (
           src={lanternLogo}
           alt="The Lantern logo"
           width="200px"
-          height="auto"
+          height="43px"
         />
       </a>
       <span>&times;</span>
