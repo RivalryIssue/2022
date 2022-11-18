@@ -62,7 +62,12 @@ const ArticleCard = ({ data }) => {
         className={`article-card ${divClassName} ${school}`}
       >
         <div className="article-text">
-          <a href={data["Story Link"]} className={`text-link ${school}-link`}>
+          <a
+            href={data["Story Link"]}
+            className={`text-link ${school}-link`}
+            rel="noreferrer"
+            target="_blank"
+          >
             <h2 className="article-title">{data["Story Title"]}</h2>
           </a>
           <div className="article-author">{data.Author}</div>
