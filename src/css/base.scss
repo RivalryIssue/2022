@@ -1,13 +1,10 @@
-$daily-base: rgb(47, 65, 98);
-$lantern-base: rgb(185, 54, 53);
-
 *:focus {
 	outline: none !important;
 }
 
 @font-face {
 	font-family: 'Freshman';
-	src: url('../fonts/Freshman.ttf') format('truetype');
+	src: url('/fonts/Freshman.ttf') format('truetype');
 	font-display: swap;
 }
 

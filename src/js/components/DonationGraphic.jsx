@@ -16,8 +16,12 @@ const DonationGraphic = () => {
 
 	return (
 		<div className="graphic-container">
-			<DonationBar organization="The Lantern" amount={lanternMoney} color="rgb(185, 54, 53)" />
-			<DonationBar organization="The Michigan Daily" amount={dailyMoney} color="rgb(47, 65, 98)" />
+			<DonationBar organization="The Lantern" amount={lanternMoney} color="var(--color-lantern)" />
+			<DonationBar
+				organization="The Michigan Daily"
+				amount={dailyMoney}
+				color="var(--color-daily)"
+			/>
 
 			<div className="buttons-container">
 				<div className="donation-button">

@@ -57,14 +57,10 @@ const ArticleCard = ({ data }) => {
 			<div
 				ref={ref}
 				style={{ backgroundImage: source }}
-				className={`article-card ${divClassName} ${school}`}>
+				className={`article-card ${divClassName} ${school}`}
+			>
 				<div className="article-text">
-					<a
-						href={data['Story Link']}
-						className={`text-link ${school}-link`}
-						rel="noreferrer"
-						target="_blank"
-					>
+					<a href={data['Story Link']} className="text-link" rel="noreferrer" target="_blank">
 						<h2 className="article-title">{data['Story Title']}</h2>
 					</a>
 					<div className="article-author">{data.Author}</div>

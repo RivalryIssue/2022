@@ -5,7 +5,7 @@
 	align-items: center;
 	height: fit-content;
 	min-height: 100vh;
-	background: linear-gradient(to right, rgb(185, 54, 53) 50%, rgb(47, 65, 98) 50% 100%);
+	background: linear-gradient(to right, var(--color-lantern) 50%, var(--color-daily) 50% 100%);
 }
 
 #logos {
@@ -95,12 +95,12 @@
 }
 
 #left-flag::after {
-	border-left: 20px solid rgb(185, 54, 53);
+	border-left: 20px solid var(--color-lantern);
 }
 
 #right-flag::after {
 	left: 20px;
-	border-right: 20px solid rgb(47, 65, 98);
+	border-right: 20px solid var(--color-daily);
 }
 
 .chevron {
