@@ -22,19 +22,17 @@ Deploy to GitHub Pages by running `yarn sink deploy github`.
 If you want to import an image with a static name, you can simply import it:
 
 ```javascript
-import photo from "../assets/photo.jpg";
+import photo from '../assets/photo.jpg';
 
-const Component = () => (
-  <img src={photo} alt="Alternative text" />
-)
+const Component = () => <img src={photo} alt="Alternative text" />;
 ```
 
 If you want to import images with variable names, you'll need to use a [URL constructor](https://developer.mozilla.org/en-US/docs/Web/API/URL) and [`import.meta.url`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta):
 
 ```javascript
 const Component = ({ image }) => (
-  <img src={new URL(image, import.meta.url).href} alt="Alternative text" />
-)
+	<img src={new URL(image, import.meta.url).href} alt="Alternative text" />
+);
 ```
 
 That said, you'll probably want to be importing images by using a CDN (e.g. Jetpack).
@@ -66,7 +64,7 @@ Consider the following generalized URL:
 You can import a JSON file in JS like this:
 
 ```js
-import copy from "../data/data.json";
+import copy from '../data/data.json';
 ```
 
 #### Fetching a CSV from a Google Sheet
@@ -83,7 +81,7 @@ Consider the following generalized URL:
 You can import a CSV file in JS like this:
 
 ```js
-import csvfile from "../data/data.csv";
+import csvfile from '../data/data.csv';
 ```
 
 We use the `@rollup/plugin-dsv` plugin (which relies on [`d3-dsv`](https://github.com/d3/d3-dsv)) to parse the CSV file into a usable array.
